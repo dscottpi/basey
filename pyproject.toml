@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "basey"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python package for encoding/decoding base 10"
 authors = ["Dan Scott <dscott304@gmail.com>"]
 
