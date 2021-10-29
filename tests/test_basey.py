@@ -1,5 +1,5 @@
-from pybase import __version__
-from pybase.lib import decode, encode
+from basey import __version__
+from basey.lib import decode, encode
 
 def test_version():
     assert __version__ == '0.1.0'

@@ -1,4 +1,5 @@
 BASE_62 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+BASE_64 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/'
 
 def encode(n: int, base: str=BASE_62) -> str: 
     base_size = len(base)
@@ -11,8 +12,7 @@ def encode(n: int, base: str=BASE_62) -> str:
     encoded_string_append = encoded_string.append
 
     while n > 0:
-        remainder = n % base_size
-        n = n // base_size
+        n, remainder = divmod(n, base_size)
         
         encoded_string_append(base[remainder])
     
